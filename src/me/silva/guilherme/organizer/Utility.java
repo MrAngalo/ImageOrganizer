@@ -123,9 +123,14 @@ public final class Utility {
 	
 	public static File getUniqueFilename( File file )
 	{
-	    String fullName[] = file.getName().split("\\.");
-		String name = fullName[0];
-		String ext = fullName[1];
+		String fullName = file.getName();
+		int dotIndex = fullName.lastIndexOf("\\.");
+		String name = fullName.substring(0, dotIndex);
+		String ext = fullName.substring(dotIndex+1);
+		
+//	    String fullName[] = file.getName().split("\\.");
+//		String name = fullName[0];
+//		String ext = fullName[1];
 	    
 	    int counter = 1;
 	    while(file.exists())
