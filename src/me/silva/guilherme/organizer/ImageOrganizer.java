@@ -36,7 +36,7 @@ public class ImageOrganizer {
 				organize(file, dest, callback);
 			} else if (Utility.hasFileExtension(file.getAbsolutePath(), extensions)) {
 				String fullName = file.getName();
-				int dotIndex = fullName.lastIndexOf("\\.");
+				int dotIndex = fullName.lastIndexOf(".");
 				String name = fullName.substring(0, dotIndex);
 				String ext = fullName.substring(dotIndex+1);
 				
