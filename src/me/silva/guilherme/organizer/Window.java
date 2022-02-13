@@ -181,7 +181,7 @@ public class Window extends JFrame {
 		
 		extensionField = new JTextField();
 		extensionField.setToolTipText("extensions that will be analyzed inside the source directory");
-		extensionField.setText("png,jpg,gif,mp4,mov,mpg,wmv");
+		extensionField.setText("png,jpg,jpeg,gif,mp4,mov,mpg,wmv,3gp,avi,ogg,mp3,wma");
 		extensionField.setColumns(10);
 		extensionField.setBounds(160, 270, 241, 22);
 		contentPane.add(extensionField);
