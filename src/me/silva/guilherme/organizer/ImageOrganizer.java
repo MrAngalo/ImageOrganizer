@@ -47,7 +47,12 @@ public class ImageOrganizer {
 				try {
 					BasicFileAttributes attr = Files.readAttributes(file.toPath(), BasicFileAttributes.class);
 					
-					LocalDateTime time = LocalDateTime.ofEpochSecond(attr.creationTime().to(TimeUnit.SECONDS), 0, ZoneOffset.UTC);
+					long earliestSinceEpoch = Math.min(Math.min(
+							attr.creationTime().to(TimeUnit.SECONDS),
+							attr.lastAccessTime().to(TimeUnit.SECONDS)),
+							attr.lastModifiedTime().to(TimeUnit.SECONDS));
+					
+					LocalDateTime time = LocalDateTime.ofEpochSecond(earliestSinceEpoch, 0, ZoneOffset.UTC);
 					//String filledPattern = date.format(DateTimeFormatter.ofPattern(pattern)).replaceAll("NAME", name) + "." + ext;
 					String filledPattern = Utility.populateTemplate(pattern, time, name, ext);
 					
