@@ -1,0 +1,56 @@
+############
+# Main GUI #
+############
+Source Directory:
+The directory to fetch the images from (this is recursive)
+Open
+
+Destination Directory:
+The directory to place all organized images
+Open
+
+Folder Pattern Template:
+The folder structure used to organize files
+
+Folder Pattern used:
+Customize the folder structure here
+Info
+
+Options:
+Select how source images will be treated
+Copy files from source
+Move files from source (dangerous)
+
+Select how repeating images will be treated
+Add trailing index to files ex. (1)
+Skip files with same name
+
+Extensions:
+Searches only the files that have the extension
+
+Start
+Cancel
+
+#######################
+# Warning Status Code #
+#######################
+Error: a field is empty!
+Error: a path does not exist!
+Error: a path cannot be relative!
+Error: the paths cannot be the same!
+Error: a path is not a directory!
+Error: a path cannot contain another!
+Error: an extension cannot contain spaces!
+Error: There are no files to organize!
+Error: The custom pattern is invalid!
+Sucess: Processing images!
+Sucess: Finished operation!
+Sucess: Canceled operation!
+Status: Pending Cancelation!
+
+#######################
+# Confirmation Popups #
+#######################
+You are using a CUSTOM PATTERN! Are you sure you want to continue?\n\n{pattern}
+There are {total} files in source that will be affected! Are you sure you want to continue?
+The destination folder is not empty! Are you sure you want to continue?

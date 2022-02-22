@@ -17,7 +17,7 @@ public final class Utility {
 	static {
 		folderChooser = new JFileChooser();
 		folderChooser.setCurrentDirectory(new File("."));
-		folderChooser.setDialogTitle("choosertitle");
+		folderChooser.setDialogTitle("Choose Folder");
 		folderChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 		folderChooser.setAcceptAllFileFilterUsed(true);
 	}
