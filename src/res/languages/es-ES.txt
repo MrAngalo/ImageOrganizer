@@ -1,0 +1,56 @@
+############
+# Main GUI #
+############
+Directorio de Origen:
+El directorio para obtener imágenes de (es recursivo)
+Abrir
+
+Directorio de destinos:
+El directorio para colocar todas las imágenes organizadas
+Abrir
+
+Plantilla del patrón de la carpeta:
+La estructura de carpetas utilizada para organizar los archivos
+
+Carpeta patrón utilizada:
+Personalice la estructura de carpetas aquí
+Info
+
+Opciones:
+Seleccione cómo se tratarán las imágenes de origen
+Copiar archivos desde el origen
+Mover archivos desde el origen (peligroso)
+
+Seleccione cómo se tratarán las imágenes repetidas
+Añade un índice final a los archivos, e.g. (1)
+Omitir archivos con el mismo nombre
+
+Extensiones:
+Busca sólo los archivos que tienen la extensión
+
+Comenzar
+Cancelar
+
+#######################
+# Warning Status Code #
+#######################
+Error: ¡Un campo está vacío!
+Error: ¡Una ruta no existe!
+Error: ¡Una ruta no puede ser relativa!
+Error: ¡Las rutas no pueden ser las mismas!
+Error: ¡Una ruta no es un directorio!
+Error: ¡Una ruta no puede contener otra!
+Error: ¡Una extensión no puede contener espacios!
+Error: ¡No hay archivos para organizar!
+Error: ¡El patrón personalizado no es válido!
+Éxito: ¡Procesando imágenes!
+Éxito: ¡Operación finalizada!
+Éxito: ¡Operación cancelada!
+Estado: ¡Pendiente de Cancelación!
+
+#######################
+# Confirmation Popups #
+#######################
+¡Está utilizando un PATRÓN PERSONALIZADO! ¿Está seguro de que quiere continuar?\n\n{pattern}
+¡Hay {total} archivos en origen que se verán afectados! ¿Está seguro de que quiere continuar?
+¡La carpeta de destino no está vacía! ¿Está seguro de que quiere continuar?
