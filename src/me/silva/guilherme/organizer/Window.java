@@ -82,7 +82,7 @@ public class Window extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel logo = new JLabel(new ImageIcon(ClassLoader.getSystemClassLoader().getResource("res/images/logo.png")));
+		JLabel logo = new JLabel(new ImageIcon(getClass().getResource("/res/images/logo.png")));
 
 		logo.setBounds(10, 10, 466, 64);
 		contentPane.add(logo);

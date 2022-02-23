@@ -1,12 +1,9 @@
 package me.silva.guilherme.language;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.util.Arrays;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 
 public class Language {
@@ -36,27 +33,26 @@ public class Language {
 	private String langName;
 	private HashMap<PromptKey, String> promptMap;
 	
-	public Language(String langName, URL resource) {
-
+	public Language(String langName, String path) {
+		this.langName = langName;
+		this.promptMap = new HashMap<>();
+		
 		try {
-			File file = new File(resource.toURI()); // creates a new file instance
-			FileReader fr = new FileReader(file); // reads the file
-			BufferedReader br = new BufferedReader(fr); // creates a buffering character input stream
-			
-			String[] prompts = br.lines().filter(line -> line.length() > 0 && line.charAt(0) != '#').toArray(String[]::new);
-			PromptKey[] keys = PromptKey.values();
-			
-			fr.close(); // closes the stream and release the resources
+			InputStream stream = getClass().getResourceAsStream(path);
+	        BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+	        
+	        String[] prompts = reader.lines().filter(line -> line.length() > 0 && line.charAt(0) != '#').toArray(String[]::new);
+	        PromptKey[] keys = PromptKey.values();
+	        
+	        reader.close();
 			
 			if (prompts.length != keys.length)
 				throw new IllegalStateException("The language "+langName+" is missing prompt lines!");
 			
-			this.langName = langName;
-			this.promptMap = new HashMap<>();
 			for (int i = 0; i < keys.length; i++)
 				this.promptMap.put(keys[i], prompts[i]);
 			
-		} catch (IOException | URISyntaxException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
