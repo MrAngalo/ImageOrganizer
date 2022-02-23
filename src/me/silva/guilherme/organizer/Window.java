@@ -36,7 +36,7 @@ public class Window extends JFrame {
 	private JTextField patternField;
 	private JTextField extensionField;
 	
-	JLabel status;
+	private JLabel status;
 	
 	//https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html
 	private static final String[] PATTERN_TEMPLATES = {
@@ -87,19 +87,21 @@ public class Window extends JFrame {
 		logo.setBounds(10, 10, 466, 64);
 		contentPane.add(logo);
 		
-		//text is functionally unecessary, but up in window builder
+		//text is functionally unecessary, but shows up in window builder
 		JLabel sourceLabel = new JLabel("Source Directory:");
 		langHand.addDependent(lang -> sourceLabel.setText(lang.getPrompt(M_SourceLabel)));
 		sourceLabel.setBounds(10, 84, 140, 20);
 		contentPane.add(sourceLabel);
 
 		sorceField = new JTextField();
+		//text is functionally unecessary, but shows up in window builder
 		sorceField.setToolTipText("the directory including all images to be organized (recursive)");
 		langHand.addDependent(lang -> sorceField.setToolTipText(lang.getPrompt(M_SourceToolTip)));
 		sorceField.setBounds(160, 84, 241, 22);
 		contentPane.add(sorceField);
 		sorceField.setColumns(10);
-		
+
+		//text is functionally unecessary, but shows up in window builder
 		JButton sourceOpen = new JButton("Open");
 		langHand.addDependent(lang -> sourceOpen.setText(lang.getPrompt(M_SourceButton)));
 		sourceOpen.setBounds(411, 84, 65, 21);
@@ -111,18 +113,21 @@ public class Window extends JFrame {
 	    		sorceField.setText(directory.toString());
 		});
 		
+		//text is functionally unecessary, but shows up in window builder
 		JLabel destLabel = new JLabel("Destination Directory:");
 		langHand.addDependent(lang -> destLabel.setText(lang.getPrompt(M_DestLabel)));
 		destLabel.setBounds(10, 114, 140, 20);
 		contentPane.add(destLabel);
 		
 		destField = new JTextField();
+		//text is functionally unecessary, but shows up in window builder
 		destField.setToolTipText("the directory to deposit sorted images");
 		langHand.addDependent(lang -> destField.setToolTipText(lang.getPrompt(M_DestToolTip)));
 		destField.setColumns(10);
 		destField.setBounds(160, 114, 241, 22);
 		contentPane.add(destField);
-		
+
+		//text is functionally unecessary, but shows up in window builder
 		JButton destOpen = new JButton("Open");
 		langHand.addDependent(lang -> destOpen.setText(lang.getPrompt(M_DestButton)));
 		destOpen.setBounds(411, 114, 65, 21);
@@ -134,12 +139,14 @@ public class Window extends JFrame {
 	    		destField.setText(directory.toString());
 		});
 
+		//text is functionally unecessary, but shows up in window builder
 		JLabel patternTemplateLabel = new JLabel("Folder Pattern Template:");
 		langHand.addDependent(lang -> patternTemplateLabel.setText(lang.getPrompt(M_PatternTemplateLabel)));
 		patternTemplateLabel.setBounds(10, 144, 140, 20);
 		contentPane.add(patternTemplateLabel);
 		
 		JComboBox patternTemplateSelect = new JComboBox();
+		//text is functionally unecessary, but shows up in window builder
 		patternTemplateSelect.setToolTipText("The folder structure used to organize files");
 		langHand.addDependent(lang -> patternTemplateSelect.setToolTipText(lang.getPrompt(M_PatternTemplateToolTip)));
 		patternTemplateSelect.setModel(new DefaultComboBoxModel(populateTemplates()));
@@ -154,12 +161,14 @@ public class Window extends JFrame {
 			}
 		});
 
+		//text is functionally unecessary, but shows up in window builder
 		JLabel patternLabel = new JLabel("Folder Pattern Used:");
 		langHand.addDependent(lang -> patternLabel.setText(lang.getPrompt(M_PatternCustomLabel)));
 		patternLabel.setBounds(10, 174, 140, 20);
 		contentPane.add(patternLabel);
 		
 		patternField = new JTextField();
+		//text is functionally unecessary, but shows up in window builder
 		patternField.setToolTipText("the format used inside the destination directory");
 		langHand.addDependent(lang -> patternField.setToolTipText(lang.getPrompt(M_PatternCustomToolTip)));
 		patternField.setColumns(10);
@@ -167,6 +176,7 @@ public class Window extends JFrame {
 		contentPane.add(patternField);
 		patternField.setText(PATTERN_TEMPLATES[0]);
 
+		//text is functionally unecessary, but shows up in window builder
 		JButton patternHelp = new JButton("?");
 		langHand.addDependent(lang -> patternHelp.setText(lang.getPrompt(M_PatternCustomButton)));
 		patternHelp.setBounds(411, 176, 65, 21);
@@ -176,12 +186,14 @@ public class Window extends JFrame {
 	    	Utility.openWebpage("https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html#patterns");
 		});
 		
+		//text is functionally unecessary, but shows up in window builder
 		JLabel optionsLabel = new JLabel("Options:");
 		langHand.addDependent(lang -> optionsLabel.setText(lang.getPrompt(M_OptionsLabel)));
 		optionsLabel.setBounds(10, 204, 100, 20);
 		contentPane.add(optionsLabel);
 		
 		JComboBox transferModeSelect = new JComboBox();
+		//text is functionally unecessary, but shows up in window builder
 		transferModeSelect.setToolTipText("select how source images will be treated");
 		transferModeSelect.setModel(new DefaultComboBoxModel(new String[] {
 				"Copy files from source", "Move files from source (caution)"}));
@@ -195,6 +207,7 @@ public class Window extends JFrame {
 		contentPane.add(transferModeSelect);
 		
 		JComboBox resolverModeSelect = new JComboBox();
+		//text is functionally unecessary, but shows up in window builder
 		resolverModeSelect.setToolTipText("select how repeating images will be treated");
 		resolverModeSelect.setModel(new DefaultComboBoxModel(new String[] {
 				"Add trailing index to files of same name ex. (1)", "Skip files with the same name"}));
@@ -206,13 +219,15 @@ public class Window extends JFrame {
 		resolverModeSelect.setSelectedIndex(0);
 		resolverModeSelect.setBounds(160, 239, 316, 22);
 		contentPane.add(resolverModeSelect);
-		
+
+		//text is functionally unecessary, but shows up in window builder
 		JLabel extensionLabel = new JLabel("Extensions:");
 		langHand.addDependent(lang -> extensionLabel.setText(lang.getPrompt(M_ExtensionsLabel)));
 		extensionLabel.setBounds(10, 269, 140, 20);
 		contentPane.add(extensionLabel);
 		
 		extensionField = new JTextField();
+		//text is functionally unecessary, but shows up in window builder
 		extensionField.setToolTipText("extensions that will be analyzed inside the source directory");
 		langHand.addDependent(lang -> extensionField.setToolTipText(lang.getPrompt(M_ExtensionsToolTip)));
 		extensionField.setText("png,jpg,jpeg,gif,mp4,mov,mpg,wmv,3gp,avi,ogg,mp3,wma");
@@ -222,7 +237,7 @@ public class Window extends JFrame {
 		
 		statusCode = 0;
 		status = new JLabel("");
-		langHand.addDependent(lang -> displayStatus(statusCode));
+		langHand.addDependent(lang -> updateStatus(statusCode));
 		status.setBounds(10, 300, 286, 20);
 		contentPane.add(status);
 		
@@ -230,7 +245,8 @@ public class Window extends JFrame {
 		progressBar.setStringPainted(true);
 		progressBar.setBounds(306, 325, 170, 21);
 		contentPane.add(progressBar);
-		
+
+		//text is functionally unecessary, but shows up in window builder
 		JButton cancelButton = new JButton("Cancel");
 		langHand.addDependent(lang -> cancelButton.setText(lang.getPrompt(M_CancelButton)));
 		cancelButton.setEnabled(false);
@@ -239,9 +255,10 @@ public class Window extends JFrame {
 		
 		cancelButton.addActionListener( e -> {
 			imgOrgThrd.interrupt();
-			displayStatus(statusCode = 13);
+			updateStatus(statusCode = 13);
 		});
-		
+
+		//text is functionally unecessary, but shows up in window builder
 		JButton startButton = new JButton("Start");
 		langHand.addDependent(lang -> startButton.setText(lang.getPrompt(M_StartButton)));
 		startButton.setBounds(306, 299, 80, 21);
@@ -262,7 +279,7 @@ public class Window extends JFrame {
 			for (String value : new String[]{sourceVal, destVal, patternVal, extensionsVal}) {
 				if (value.isEmpty()) {
 					//Error: a field is empty!
-					displayStatus(statusCode = 1);
+					updateStatus(statusCode = 1);
 					return;
 				}
 			}
@@ -273,28 +290,28 @@ public class Window extends JFrame {
 	    	//escapes if one of the paths does not exist
 	    	if (!source.exists() || !dest.exists()) {
 	    		//Error: a path does not exist!
-	    		displayStatus(statusCode = 2);
+	    		updateStatus(statusCode = 2);
 	    		return;
 	    	}
 	    	
 	    	//espaces if one of the paths is relative ex "./folder"
 	    	if (!source.isAbsolute() || !dest.isAbsolute()) {
 	    		//Error: a path cannot be relative!
-	    		displayStatus(statusCode = 3);
+	    		updateStatus(statusCode = 3);
 	    		return;
 	    	}
 	    	
 	    	//escapes if the paths are the same
 	    	if (source.equals(dest)) {
 	    		//Error: the paths cannot be the same!
-	    		displayStatus(statusCode = 4);
+	    		updateStatus(statusCode = 4);
 	    		return;
 	    	}
 	    	
 	    	//escapes if one of the paths is not a directory
 	    	if (!source.isDirectory() || !dest.isDirectory()) {
 	    		//Error: a path is not a directory!
-	    		displayStatus(statusCode = 5);
+	    		updateStatus(statusCode = 5);
 	    		return;
 	    	}
 	    	
@@ -304,7 +321,7 @@ public class Window extends JFrame {
 	    	//escapes if one of the paths contain another
 	    	if (sourcePath.startsWith(destPath) || destPath.startsWith(sourcePath)) {
 	    		//Error: a path cannot contain another!
-	    		displayStatus(statusCode = 6);
+	    		updateStatus(statusCode = 6);
 	    		return;
 	    	}
 		    	
@@ -312,7 +329,7 @@ public class Window extends JFrame {
 	    	for (String extension : extensions) {
 				if (extension.contains(" ")) {
 					//Error: an extension cannot contain spaces!
-		    		displayStatus(statusCode = 7);
+		    		updateStatus(statusCode = 7);
 		    		return;
 		    	}
 	    	}
@@ -320,12 +337,12 @@ public class Window extends JFrame {
 	    	int totalFileCount = Utility.countFiles(source, extensions);
 	    	if (totalFileCount == 0) {
 	    		//Error: There are no files to organize!
-	    		displayStatus(statusCode = 8);
+	    		updateStatus(statusCode = 8);
 	    		return;
 	    	}
 	    	
 	    	//Empty Message
-	    	displayStatus(statusCode = 0); //no warnings, errors
+	    	updateStatus(statusCode = 0); //no warnings, errors
 	    	
 	    	if (!Utility.contains(PATTERN_TEMPLATES, patternVal)) {
 	    		LocalDateTime time = LocalDateTime.now();
@@ -333,7 +350,7 @@ public class Window extends JFrame {
 	    		
 	    		if (filledPattern == null) {
 	    			//Error: The custom pattern is invalid!
-	    			displayStatus(statusCode = 9);
+	    			updateStatus(statusCode = 9);
 	    			return;
 	    		}
 	    		
@@ -354,7 +371,7 @@ public class Window extends JFrame {
 	    	}
 	    	
 	    	//Sucess: Processing images!
-	    	displayStatus(statusCode = 10);
+	    	updateStatus(statusCode = 10);
 	    	
 	    	progressBar.setMinimum(0);
 	    	progressBar.setMaximum(totalFileCount);
@@ -371,7 +388,7 @@ public class Window extends JFrame {
 		    	
 		    	//if not interrupted -> Sucess: Finished operation!
 		    	//if interrupted -> Sucess: Canceled operation!
-		    	displayStatus(!imgOrgThrd.isInterrupted() ? (statusCode = 11) : (statusCode = 12));
+		    	updateStatus(!imgOrgThrd.isInterrupted() ? (statusCode = 11) : (statusCode = 12));
 		    	
 		    	startButton.setEnabled(true);
 		    	cancelButton.setEnabled(false);
@@ -414,48 +431,7 @@ public class Window extends JFrame {
 		return populated;
 	}
 	
-	private String validateFields(String... values) {
-		for (String value: values)
-			if (value.isEmpty())
-				return "Error: a field is empty!";
-		return null;
-	}
-	
-	private String validatePaths(File source, File dest) {
-		
-		//escapes if one of the paths does not exist
-    	if (!source.exists() || !dest.exists())
-    		return "Error: a path does not exist!";
-    	
-    	if (!source.isAbsolute() || !dest.isAbsolute())
-    		return "Error: a path cannot be relative!";
-    	
-    	//escapes if the paths are the same
-    	if (source.equals(dest))
-    		return "Error: the paths cannot be the same!";
-    	
-    	//escapes if one of the paths is not a directory
-    	if (!source.isDirectory() || !dest.isDirectory())
-    		return "Error: a path is not a directory!";
-    	
-    	Path sourcePath = source.toPath();
-    	Path destPath = dest.toPath();
-    	
-    	//escapes if one of the paths contain another
-    	if (sourcePath.startsWith(destPath) || destPath.startsWith(sourcePath))
-    		return "Error: a path cannot contain another!";
-    	
-    	return null;
-	}
-	
-	private String validateExtensions(String[] extensions) {
-		for (String extension : extensions)
-			if (extension.contains(" "))
-				return "Error: an extension cannot contain spaces!";
-		return null;
-	}
-	
-	private void displayStatus(int code) {
+	private void updateStatus(int code) {
 		status.setText(code == 0 ? "" :
 			langHand.getCurrent().getPrompt(values()[StatusCode1.ordinal() + code -1]));
 	}

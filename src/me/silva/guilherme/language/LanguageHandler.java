@@ -25,7 +25,7 @@ public class LanguageHandler {
 		try {
 	        InputStream stream = getClass().getResourceAsStream(PATH_LANG_LIST);
 	        BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
-	        
+	       
 	        String[] langFiles = reader.lines().toArray(String[]::new);
 	        
 	        reader.close();
@@ -37,7 +37,7 @@ public class LanguageHandler {
 	        }
 	        
 		} catch (IOException e) {
-			
+			e.printStackTrace();
 		}
 	}
 	
