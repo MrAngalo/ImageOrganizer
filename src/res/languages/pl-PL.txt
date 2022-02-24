@@ -1,0 +1,56 @@
+############
+# Main GUI #
+############
+Katalog źródłowy:
+Katalog, z którego pobierane są obrazy (jest to działanie rekurencyjne)
+otwarty
+
+Katalog docelowy:
+Katalog do umieszczenia wszystkich uporządkowanych obrazów
+otwarty
+
+Szablon wzoru folderu:
+Struktura folderów używana do organizowania plików
+
+Użyty wzorzec folderu:
+Dostosuj tutaj strukturę folderów
+Informacje
+
+Opcje:
+Wybierz, jak będą traktowane obrazy źródłowe
+Skopiuj pliki ze źródła
+Przenieś pliki ze źródła (niebezpieczne)
+
+Wybierz sposób traktowania powtarzających się obrazów
+Dodaj końcowy indeks do plików np. (1)
+Pomiń pliki o tej samej nazwie
+
+Rozszerzenia:
+Przeszukuje tylko pliki, które mają rozszerzenie
+
+Początek
+Anulować
+
+#######################
+# Warning Status Code #
+#######################
+Error: pole jest puste!
+Error: ścieżka nie istnieje!
+Error: ścieżka nie może być względna!
+Error: ścieżki nie mogą być takie same!
+Error: ścieżka nie jest katalogiem!
+Error: ścieżka nie może zawierać innej!
+Error: rozszerzenie nie może zawierać spacji!
+Error: Brak plików do uporządkowania!
+Error: niestandardowy wzór jest nieprawidłowy!
+Sukces: przetwarzanie obrazów!
+Sukces: Zakończona operacja!
+Sukces: anulowana operacja!
+Status: Oczekuje na anulowanie!
+
+#######################
+# Confirmation Popups #
+#######################
+Używasz WZORU NIESTANDARDOWEGO! Czy na pewno chcesz kontynuować?\n\n{pattern}
+Istnieje {total} plików w źródle, których to dotyczy! Jesteś pewien, że chcesz kontynuować?
+Folder docelowy nie jest pusty! Jesteś pewien, że chcesz kontynuować?
