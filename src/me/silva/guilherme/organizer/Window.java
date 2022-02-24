@@ -22,6 +22,7 @@ import javax.swing.border.EmptyBorder;
 import me.silva.guilherme.language.LanguageHandler;
 
 import static me.silva.guilherme.language.Language.PromptKey.*;
+import javax.swing.SwingConstants;
 
 public class Window extends JFrame {
 	

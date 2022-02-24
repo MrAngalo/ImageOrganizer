@@ -16,41 +16,41 @@ Templete utilizado:
 Customize a estrutura de pastas aqui.
 Info
 
-OpÁıes:
-Selecione como os arquivos fonte ser„o tratados.
+Op√ß√µes:
+Selecione como os arquivos fonte ser√£o tratados.
 Copiar da fonte
 Mover da fonte (perigoso)
 
-Selecione como os arquivos repetitivos ser„o tratados.
-Adicionar Ìndice no final ex. (1)
+Selecione como os arquivos repetitivos ser√£o tratados.
+Adicionar √≠ndice no final ex. (1)
 Pular arquivos com o mesmo nome.
 
-Extensıes:
-Procura somente os arquivos com as extens„o acima.
+Extens√µes:
+Procura somente os arquivos com as extens√£o acima.
 
-ComeÁar
+Come√ßar
 Cancelar
 
 #######################
 # Warning Status Code #
 #######################
-Erro: um campo est· em branco!
-Erro: um caminho de pasta n„o existe!
-Erro: um caminho de pasta n„o pode ser relativo!
-Erro: os caminhos de pasta n„o podem ser iguais!
-Erro: um caminho n„o È se refere a uma pasta!
-Erro: um caminho n„o pode conter o outro!
-Erro: uma extens„o n„o pode conter espaÁos!
-Erro: N„o h· arquivos para organizar!
-Erro: O templete customizado est· inv·lido!
+Erro: um campo est√° em branco!
+Erro: um caminho de pasta n√£o existe!
+Erro: um caminho de pasta n√£o pode ser relativo!
+Erro: os caminhos de pasta n√£o podem ser iguais!
+Erro: um caminho n√£o √© se refere a uma pasta!
+Erro: um caminho n√£o pode conter o outro!
+Erro: uma extens√£o n√£o pode conter espa√ßos!
+Erro: N√£o h√° arquivos para organizar!
+Erro: O templete customizado est√° inv√°lido!
 Sucesso: Processando imagens!
-Sucesso: OperaÁ„o finalizada!
-Sucesso: OperaÁ„o cancelada!
+Sucesso: Opera√ß√£o finalizada!
+Sucesso: Opera√ß√£o cancelada!
 Status: Cancelamento pendente!
 
 #######################
 # Confirmation Popups #
 #######################
-VocÍ est· usando um TEMPLETE CUSTOMIZADO! Tem certeza de que deseja continuar?\n\n{pattern}
-Existem {total} arquivos na fonte que ser„o afetados! VocÍ tem certeza que deseja continuar?
-A pasta de destino n„o est· vazia! VocÍ tem certeza que deseja continuar?
+Voc√™ est√° usando um TEMPLETE CUSTOMIZADO! Tem certeza de que deseja continuar?\n\n{pattern}
+Existem {total} arquivos na fonte que ser√£o afetados! Voc√™ tem certeza que deseja continuar?
+A pasta de destino n√£o est√° vazia! Voc√™ tem certeza que deseja continuar?
