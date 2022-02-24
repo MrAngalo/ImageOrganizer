@@ -1,3 +1,4 @@
+# Translated by MrAngalo (https://github.com/MrAngalo)
 ############
 # Main GUI #
 ############
