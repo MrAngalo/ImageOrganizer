@@ -1,3 +1,4 @@
+# Translated by qauinger (https://github.com/qauinger)
 ############
 # Main GUI #
 ############
