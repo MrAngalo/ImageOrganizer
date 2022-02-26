@@ -1,4 +1,5 @@
 en-US.txt
 es-ES.txt
+fr-FR.txt
 pl-PL.txt
 pt-BR.txt
