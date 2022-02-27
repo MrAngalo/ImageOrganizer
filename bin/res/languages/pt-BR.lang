@@ -1,0 +1,99 @@
+######################################################################
+# This file contains all phrases used in the program.
+# It follows the same syntax as the .properties file
+#
+# To add comments, use # in front of every line
+# Do not remove any key-value pair
+
+# [IMPORTANT]: DO NOT MODIFY the keys before the equal sign (=)
+# and the placeholders "{pattern}" and "{total}"
+#
+# [Note]: DO NOT use Eclipse's built-in editor!!!
+# Modify this file using Notepad or Notepad++
+#
+# There is no need to include this comment block in translations
+######################################################################
+
+# Translated by MrAngalo (https://github.com/MrAngalo)
+
+##################################################
+# Fonts
+##################################################
+
+# This is the font used in the GUI; this font should contain all
+# characters in the file so that they display correctly.
+# An easy way to find a compatible font is to paste your text in
+# MS WORD and copying the fallback font.
+
+# The default family for swing elements is "Dialog"
+FontFamily=Dialog
+
+# The default style for swing elements is "Bold"
+# Possible values are {"Plain", "Bold", "Italic", "Bold Italic" }
+FontStyle=Bold
+
+# The default size for swing elements is "12"
+FontSize=12
+
+
+
+##################################################
+# Main GUI 
+##################################################
+SourceLabel=Pasta Fonte:
+SourceToolTip=A pasta da onde pegar as fotos e arquivos (processo recursivo)
+SourceButton=Abrir
+
+DestLabel=Pasta de Destino:
+DestToolTip=A pasta para onde colocar todas as fotos e arquivos.
+DestButton=Abrir
+
+PatternTemplateLabel=Templete das Pastas:
+PatternTemplateToolTip=A estrutura de pastas usada para organizar as fotos.
+
+PatternCustomLabel=Templete utilizado:
+PatternCustomToolTip=Customize a estrutura de pastas aqui.
+PatternCustomButton=Info
+
+OptionsLabel=Opções:
+TransferModeToolTip=Selecione como os arquivos fonte serão tratados.
+TransferModeOption1=Copiar da fonte
+TransferModeOption2=Mover da fonte (perigoso)
+
+ResolverModeToolTip=Selecione como os arquivos repetitivos serão tratados.
+ResolverModeOption1=Adicionar índice no final ex. (1)
+ResolverModeOption2=Pular arquivos com o mesmo nome.
+
+ExtensionsLabel=Extensões:
+ExtensionsToolTip=Procura somente os arquivos com as extensão acima.
+
+StartButton=Começar
+CancelButton=Cancelar
+
+
+
+##################################################
+# Warning Status Code 
+##################################################
+StatusCode1=Erro: um campo está em branco!
+StatusCode2=Erro: um caminho de pasta não existe!
+StatusCode3=Erro: um caminho de pasta não pode ser relativo!
+StatusCode4=Erro: os caminhos de pasta não podem ser iguais!
+StatusCode5=Erro: um caminho não é se refere a uma pasta!
+StatusCode6=Erro: um caminho não pode conter o outro!
+StatusCode7=Erro: uma extensão não pode conter espaços!
+StatusCode8=Erro: Não há arquivos para organizar!
+StatusCode9=Erro: O templete customizado está inválido!
+StatusCode10=Sucesso: Processando imagens!
+StatusCode11=Sucesso: Operação finalizada!
+StatusCode12=Sucesso: Operação cancelada!
+StatusCode13=Status: Cancelamento pendente!
+
+
+
+##################################################
+# Confirmation Popups
+##################################################
+ConfirmationPopup1=Você está usando um TEMPLETE CUSTOMIZADO! Tem certeza de que deseja continuar?\n\n{pattern}
+ConfirmationPopup2=Existem {total} arquivos na fonte que serão afetados! Você tem certeza que deseja continuar?
+ConfirmationPopup3=A pasta de destino não está vazia! Você tem certeza que deseja continuar?

@@ -463,7 +463,7 @@ public class Window extends JFrame {
 
 		JComboBox languageSelect = new JComboBox();
 		languageSelect.setModel(new DefaultComboBoxModel(new String[] { "en-US" }));
-		languageSelect.setModel(new DefaultComboBoxModel(langHand.getLanguageNames().toArray(String[]::new)));
+		languageSelect.setModel(new DefaultComboBoxModel(langHand.getLanguageNames()));
 		languageSelect.setSelectedIndex(0);
 		languageSelect.setBounds(411, 10, 65, 22);
 		contentPane.add(languageSelect);

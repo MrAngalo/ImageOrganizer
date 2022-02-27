@@ -1,0 +1,98 @@
+######################################################################
+# This file contains all phrases used in the program.
+# It follows the same syntax as the .properties file
+#
+# To add comments, use # in front of every line
+# Do not remove any key-value pair
+
+# [IMPORTANT]: DO NOT MODIFY the keys before the equal sign (=)
+# and the placeholders "{pattern}" and "{total}"
+#
+# [Note]: DO NOT use Eclipse's built-in editor!!!
+# Modify this file using Notepad or Notepad++
+#
+# There is no need to include this comment block in translations
+######################################################################
+
+# Translated by qauinger (https://github.com/qauinger)
+
+##################################################
+# Fonts
+##################################################
+
+# This is the font used in the GUI; this font should contain all
+# characters in the file so that they display correctly.
+# An easy way to find a compatible font is to paste your text in
+# MS WORD and copying the fallback font.
+
+# The default family for swing elements is "Dialog"
+FontFamily=Dialog
+
+# The default style for swing elements is "Bold"
+# Possible values are {"Plain", "Bold", "Italic", "Bold Italic" }
+FontStyle=Bold
+
+# The default size for swing elements is "12"
+FontSize=12
+
+
+
+##################################################
+# Main GUI 
+##################################################
+SourceLabel=Directorio de Origen:
+SourceToolTip=El directorio para obtener imágenes de (es recursivo)
+SourceButton=Abrir
+
+DestLabel=Directorio de destinos:
+DestToolTip=El directorio para colocar todas las imágenes organizadas
+DestButton=Abrir
+
+PatternTemplateLabel=Plantilla del patrón de la carpeta:
+PatternTemplateToolTip=La estructura de carpetas utilizada para organizar los archivos
+
+PatternCustomLabel=Carpeta patrón utilizada:
+PatternCustomToolTip=Personalice la estructura de carpetas aquí
+PatternCustomButton=Info
+
+OptionsLabel=Opciones:
+TransferModeToolTip=Seleccione cómo se tratarán las imágenes de origen
+TransferModeOption1=Copiar archivos desde el origen
+TransferModeOption2=Mover archivos desde el origen (peligroso)
+
+ResolverModeToolTip=Seleccione cómo se tratarán las imágenes repetidas
+ResolverModeOption1=Añade un índice final a los archivos, e.g. (1)
+ResolverModeOption2=Omitir archivos con el mismo nombre
+
+ExtensionsLabel=Extensiones:
+ExtensionsToolTip=Busca sólo los archivos que tienen la extensión
+StartButton=Comenzar
+CancelButton=Cancelar
+
+
+
+##################################################
+# Warning Status Code 
+##################################################
+StatusCode1=Error: ¡Un campo está vacío!
+StatusCode2=Error: ¡Una ruta no existe!
+StatusCode3=Error: ¡Una ruta no puede ser relativa!
+StatusCode4=Error: ¡Las rutas no pueden ser las mismas!
+StatusCode5=Error: ¡Una ruta no es un directorio!
+StatusCode6=Error: ¡Una ruta no puede contener otra!
+StatusCode7=Error: ¡Una extensión no puede contener espacios!
+StatusCode8=Error: ¡No hay archivos para organizar!
+StatusCode9=Error: ¡El patrón personalizado no es válido!
+StatusCode10=Éxito: ¡Procesando imágenes!
+StatusCode11=Éxito: ¡Operación finalizada!
+StatusCode12=Éxito: ¡Operación cancelada!
+StatusCode13=Estado: ¡Pendiente de Cancelación!
+
+
+
+##################################################
+# Confirmation Popups
+##################################################
+ConfirmationPopup1=¡Está utilizando un PATRÓN PERSONALIZADO! ¿Está seguro de que quiere continuar?\n\n{pattern}
+ConfirmationPopup2=¡Hay {total} archivos en origen que se verán afectados! ¿Está seguro de que quiere continuar?
+ConfirmationPopup3=¡La carpeta de destino no está vacía! ¿Está seguro de que quiere continuar?

@@ -1,0 +1,99 @@
+######################################################################
+# This file contains all phrases used in the program.
+# It follows the same syntax as the .properties file
+#
+# To add comments, use # in front of every line
+# Do not remove any key-value pair
+
+# [IMPORTANT]: DO NOT MODIFY the keys before the equal sign (=)
+# and the placeholders "{pattern}" and "{total}"
+#
+# [Note]: DO NOT use Eclipse's built-in editor!!!
+# Modify this file using Notepad or Notepad++
+#
+# There is no need to include this comment block in translations
+######################################################################
+
+# Translated by qauinger (https://github.com/qauinger)
+
+##################################################
+# Fonts
+##################################################
+
+# This is the font used in the GUI; this font should contain all
+# characters in the file so that they display correctly.
+# An easy way to find a compatible font is to paste your text in
+# MS WORD and copying the fallback font.
+
+# The default family for swing elements is "Dialog"
+FontFamily=Dialog
+
+# The default style for swing elements is "Bold"
+# Possible values are {"Plain", "Bold", "Italic", "Bold Italic" }
+FontStyle=Bold
+
+# The default size for swing elements is "12"
+FontSize=12
+
+
+
+##################################################
+# Main GUI 
+##################################################
+SourceLabel=Katalog źródłowy:
+SourceToolTip=Katalog, z którego pobierane są obrazy (jest to działanie rekurencyjne)
+SourceButton=otwarty
+
+DestLabel=Katalog docelowy:
+DestToolTip=Katalog do umieszczenia wszystkich uporządkowanych obrazów
+DestButton=otwarty
+
+PatternTemplateLabel=Szablon wzoru folderu:
+PatternTemplateToolTip=Struktura folderów używana do organizowania plików
+
+PatternCustomLabel=Użyty wzorzec folderu:
+PatternCustomToolTip=Dostosuj tutaj strukturę folderów
+PatternCustomButton=Informacje
+
+OptionsLabel=Opcje:
+TransferModeToolTip=Wybierz, jak będą traktowane obrazy źródłowe
+TransferModeOption1=Skopiuj pliki ze źródła
+TransferModeOption2=Przenieś pliki ze źródła (niebezpieczne)
+
+ResolverModeToolTip=Wybierz sposób traktowania powtarzających się obrazów
+ResolverModeOption1=Dodaj końcowy indeks do plików np. (1)
+ResolverModeOption2=Pomiń pliki o tej samej nazwie
+
+ExtensionsLabel=Rozszerzenia:
+ExtensionsToolTip=Przeszukuje tylko pliki, które mają rozszerzenie
+
+StartButton=Początek
+CancelButton=Anulować
+
+
+
+##################################################
+# Warning Status Code 
+##################################################
+StatusCode1=Error: pole jest puste!
+StatusCode2=Error: ścieżka nie istnieje!
+StatusCode3=Error: ścieżka nie może być względna!
+StatusCode4=Error: ścieżki nie mogą być takie same!
+StatusCode5=Error: ścieżka nie jest katalogiem!
+StatusCode6=Error: ścieżka nie może zawierać innej!
+StatusCode7=Error: rozszerzenie nie może zawierać spacji!
+StatusCode8=Error: Brak plików do uporządkowania!
+StatusCode9=Error: niestandardowy wzór jest nieprawidłowy!
+StatusCode10=Sukces: przetwarzanie obrazów!
+StatusCode11=Sukces: Zakończona operacja!
+StatusCode12=Sukces: anulowana operacja!
+StatusCode13=Status: Oczekuje na anulowanie!
+
+
+
+##################################################
+# Confirmation Popups
+##################################################
+ConfirmationPopup1=Używasz WZORU NIESTANDARDOWEGO! Czy na pewno chcesz kontynuować?\n\n{pattern}
+ConfirmationPopup2=Istnieje {total} plików w źródle, których to dotyczy! Jesteś pewien, że chcesz kontynuować?
+ConfirmationPopup3=Folder docelowy nie jest pusty! Jesteś pewien, że chcesz kontynuować?

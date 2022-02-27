@@ -5,11 +5,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
-import java.util.Set;
 
 public class LanguageHandler {
 	
@@ -18,8 +16,8 @@ public class LanguageHandler {
 	private Properties langConfig;
 	
 	private List<LanguageDependent> dependents;
-	private HashMap<String, Language> languageMap;
 	
+	private HashMap<String, Language> languageMap;
 	private Language current;
 	private Language defL;
 	
@@ -32,9 +30,7 @@ public class LanguageHandler {
 	        InputStream stream = getClass().getResourceAsStream(PATH_LANG_LIST);
 	        langConfig.load(new InputStreamReader(stream, StandardCharsets.UTF_8));
 	        
-	        String[] langNames = langConfig.getProperty("languages").trim().split(",");
-	        System.out.println(Arrays.toString(langNames));
-	        for (String langName : langNames)
+	        for (String langName : getLanguageNames())
 	        	languageMap.put(langName, new Language(langName, PATH+"/"+langName+".lang"));
 	        
 	        selectLanguage(def);
@@ -45,8 +41,8 @@ public class LanguageHandler {
 		}
 	}
 	
-	public Set<String> getLanguageNames() {
-		return languageMap.keySet();
+	public String[] getLanguageNames() {
+		return langConfig.getProperty("languages").trim().split(",");
 	}
 	
 	public Language getCurrent() {
