@@ -1,0 +1,99 @@
+######################################################################
+# This file contains all phrases used in the program.
+# It follows the same syntax as the .properties file
+#
+# To add comments, use # in front of every line
+# Do not remove any key-value pair
+
+# [IMPORTANT]: DO NOT MODIFY the keys before the equal sign (=)
+# and the placeholders "{pattern}" and "{total}"
+#
+# [Note]: DO NOT use Eclipse's built-in editor!!!
+# Modify this file using Notepad or Notepad++
+#
+# There is no need to include this comment block in translations
+######################################################################
+
+# Translated by d4nte46(https://github.com/d4nte46) 
+
+##################################################
+# Fonts
+##################################################
+
+# This is the font used in the GUI; this font should contain all
+# characters in the file so that they display correctly.
+# An easy way to find a compatible font is to paste your text in
+# MS WORD and copying the fallback font.
+
+# The default family for swing elements is "Tahoma"
+font_family=Tahoma
+
+# The default style for swing elements is "Plain"
+# Possible values are {"Plain", "Bold", "Italic", "Bold Italic" }
+font_style=Plain
+
+# The default size for swing elements is "11"
+font_size=11
+
+
+
+##################################################
+# Main GUI 
+##################################################
+SourceLabel=ফাইল এর উৎস :
+SourceToolTip=এখান থেকে সব ছবি জড়ো করা হবে । 
+SourceButton=নির্বাচন করুন 
+
+DestLabel=গন্তব্য নির্বাচন :
+DestToolTip=এখানে  বিন্যাসকৃত  ফাইলগুলো সংরক্ষিত হবে ।
+DestButton=নির্বাচন করুন 
+
+PatternTemplateLabel=Folder Pattern Template:
+PatternTemplateToolTip=The folder structure used to organize files
+
+PatternCustomLabel=ক্রম নির্বাচন:
+PatternCustomToolTip=যে ক্রম এ বিন্যাসকৃত হবে তা নির্বাচন। 
+PatternCustomButton=তথ্য 
+
+OptionsLabel=Options:বিকল্প: 
+TransferModeToolTip=যে পদ্ধতি তে উৎসের ছবি বিন্যাসকৃত হবে ।
+TransferModeOption1=উৎস থেকে ছবি অনুকরণ করুন।
+TransferModeOption2=উৎস থেকে ছবি স্থানান্তরণ করুন। (সতর্কতা অবলম্বন করুন।)
+
+ResolverModeToolTip=একইরকম  ছবির সাথে ব্যবহার : 
+ResolverModeOption1=ফাইলগুলোর পিছনে সংখ্যা যোগ করুন, যেমন (১)
+ResolverModeOption2=একইরকম ফাইলগুলো উপেক্ষা করুন।
+
+ExtensionsLabel=এক্সটেনশন : 
+ExtensionsToolTip=এক্সটেনশন অনুসারে ফাইলগুলো খোজ করুন।
+
+StartButton=সূচনা
+CancelButton=রদ 
+
+
+
+##################################################
+# Warning Status Code 
+##################################################
+StatusCode1=এরর : এক বা একাধিক ক্ষেত্র খালি রয়েছে 
+StatusCode2=এরর  : গন্তব্যের অস্তিত্য নেই 
+StatusCode3=এরর  : গন্তব্যের সম্পূর্ণ  ঠিকানা প্রোদান করুন যেমন : "C://Users//..."
+StatusCode4=এরর  :  উৎস ও গন্তব্য একইরকম হতে পারবে না 
+StatusCode5=এরর : গন্তব্য একটি ফোলডার হতে হবে 
+StatusCode6=এরর : গন্তব্য উৎসের ভেতর হতে পারবে না এবং তদ্বিপরীত
+StatusCode7=এরর :  এক্সটেনশন এ ফাঁক থাকতে পারবে না 
+StatusCode8=এরর : উৎসে  ফাইল অনুপস্থিত 
+StatusCode9=এরর : ক্রম সঠিক নয় 
+StatusCode10=সফল: ফাইলগুলোর প্রক্রিয়াকরণ  সম্পূর্ণ হচ্ছে 
+StatusCode11=সফল: কার্জকলাপ সম্পূর্ণ হয়েছে 
+StatusCode12=সফল:  কার্জকলাপ রদকরণ সম্পূর্ণ হচ্ছে 
+StatusCode13=অবস্থা: রদকরণের অনুরোধ সম্পূর্ণ হচ্ছে  
+
+
+
+##################################################
+# Confirmation Popups
+##################################################
+ConfirmationPopup1=You are using a CUSTOM PATTERN! Are you sure you want to continue?\n\n{pattern}
+ConfirmationPopup2=উৎসের {total} ফাইল প্রভাবিত  হচ্ছে  ।  অগ্রসিত হক? 
+ConfirmationPopup3=গন্তব্যে ফাইল পাওয়া গিয়েছে  । অগ্রসিত হক? 

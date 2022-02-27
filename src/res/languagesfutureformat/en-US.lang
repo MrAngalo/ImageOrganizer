@@ -66,6 +66,7 @@ ResolverModeOption2=Skip files with the same name
 
 ExtensionsLabel=Extensions:
 ExtensionsToolTip=Searches only the files that have the extension
+
 StartButton=Start
 CancelButton=Cancel
 
