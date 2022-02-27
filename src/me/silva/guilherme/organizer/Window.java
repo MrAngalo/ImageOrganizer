@@ -39,11 +39,10 @@ public class Window extends JFrame {
 	private JLabel status;
 
 	// https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html
-	private static final String[] PATTERN_TEMPLATES = { "y/MM MMMM/dd MMM y H'h_'m''s's'", /*
-																							 * 2020/08 August/15 Aug
-																							 * 2020 22h_4346s
-																							 */
+	private static final String[] PATTERN_TEMPLATES = {
+			"y/MM MMMM/dd MMM y H'h_'m'm_'s's'", /* 2020/08 August/15 Aug 2020 22h_43m_46s */
 			"y/MM MMMM/dd MMM y 'NAME'", /* 2020/08 August/15 Aug 2020 Clouds */
+			"y/MM MMMM/dd H'h_'m'm_'s's'", /* 2020/08 August/15 22h_43m_46s */
 			"y/MM MMMM/'NAME'", /* 2020/08 August/Clouds */
 			"y/'EXT'/'NAME'", /* 2020/png/Clouds */
 			"'EXT'/'NAME'" /* pngg/Clouds */
