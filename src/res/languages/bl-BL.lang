@@ -25,14 +25,14 @@
 # An easy way to find a compatible font is to paste your text in
 # MS WORD and copying the fallback font.
 
-# The default family for swing elements is "Tahoma"
-FontFamily=Tahoma
+# The default family for swing elements is "Dialog"
+FontFamily=Nirmala UI
 
-# The default style for swing elements is "Plain"
+# The default style for swing elements is "Bold"
 # Possible values are {"Plain", "Bold", "Italic", "Bold Italic" }
-FontStyle=Plain
+FontStyle=Bold
 
-# The default size for swing elements is "11"
+# The default size for swing elements is "12"
 FontSize=11
 
 
@@ -55,7 +55,7 @@ PatternCustomLabel=ক্রম নির্বাচন:
 PatternCustomToolTip=যে ক্রম এ বিন্যাসকৃত হবে তা নির্বাচন। 
 PatternCustomButton=তথ্য 
 
-OptionsLabel=Options:বিকল্প: 
+OptionsLabel=বিকল্প: 
 TransferModeToolTip=যে পদ্ধতি তে উৎসের ছবি বিন্যাসকৃত হবে ।
 TransferModeOption1=উৎস থেকে ছবি অনুকরণ করুন।
 TransferModeOption2=উৎস থেকে ছবি স্থানান্তরণ করুন। (সতর্কতা অবলম্বন করুন।)

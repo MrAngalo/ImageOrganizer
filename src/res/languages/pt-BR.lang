@@ -25,15 +25,15 @@
 # An easy way to find a compatible font is to paste your text in
 # MS WORD and copying the fallback font.
 
-# The default family for swing elements is "Tahoma"
-FontFamily=Tahoma
+# The default family for swing elements is "Dialog"
+FontFamily=Dialog
 
-# The default style for swing elements is "Plain"
+# The default style for swing elements is "Bold"
 # Possible values are {"Plain", "Bold", "Italic", "Bold Italic" }
-FontStyle=Plain
+FontStyle=Bold
 
-# The default size for swing elements is "11"
-FontSize=11
+# The default size for swing elements is "12"
+FontSize=12
 
 
 
