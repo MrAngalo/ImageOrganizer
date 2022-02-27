@@ -26,14 +26,14 @@
 # MS WORD and copying the fallback font.
 
 # The default family for swing elements is "Tahoma"
-font_family=Tahoma
+FontFamily=Tahoma
 
 # The default style for swing elements is "Plain"
 # Possible values are {"Plain", "Bold", "Italic", "Bold Italic" }
-font_style=Plain
+FontStyle=Plain
 
 # The default size for swing elements is "11"
-font_size=11
+FontSize=11
 
 
 

@@ -1,19 +1,20 @@
 package me.silva.guilherme.language;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Properties;
 import java.util.Set;
 
 public class LanguageHandler {
 	
-	private static final String PATH = "/res/languages";
-	private static final String PATH_LANG_LIST = PATH+"/_list.txt";
+	private static final String PATH = "/res/languagesfutureformat";
+	private static final String PATH_LANG_LIST = PATH+"/config.properties";
+	private Properties langConfig;
 	
 	private List<LanguageDependent> dependents;
 	private HashMap<String, Language> languageMap;
@@ -22,20 +23,24 @@ public class LanguageHandler {
 	public LanguageHandler(String def) {
 		this.dependents = new ArrayList<>();
 		this.languageMap = new HashMap<>();
+		this.langConfig = new Properties();
 		
 		try {
 	        InputStream stream = getClass().getResourceAsStream(PATH_LANG_LIST);
-	        BufferedReader reader = new BufferedReader(new InputStreamReader(stream, StandardCharsets.UTF_8));
+//	        BufferedReader reader = new BufferedReader(new InputStreamReader(stream, StandardCharsets.UTF_8));
 	       
-	        String[] langFiles = reader.lines().toArray(String[]::new);
+	        langConfig = new Properties();
+	        langConfig.load(new InputStreamReader(stream, Charset.forName("UTF-8")));
 	        
-	        reader.close();
+	        String[] langNames = langConfig.getProperty("languages").split(",");
+//	        reader.lines().toArray(String[]::new);
+//	        reader.close();
 	        
-	        for (String langFile : langFiles) {
-	        	String langName = langFile.substring(0, langFile.lastIndexOf('.'));
-	        	Language langObj = new Language(langName, PATH+"/"+langFile);
-	        	languageMap.put(langName, langObj);
-	        }
+	        for (String langName : langNames)
+//	        	String langName = langFile.substring(0, langFile.lastIndexOf('.'));
+	        	languageMap.put(langName, new Language(langName, PATH+"/"+langName+".lang"));
+	        
+	        selectLanguage(def);
 	        
 		} catch (IOException e) {
 			e.printStackTrace();

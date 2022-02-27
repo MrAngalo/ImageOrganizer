@@ -35,6 +35,7 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.nio.file.Path;
 import java.time.LocalDateTime;
+import java.util.Properties;
 
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
