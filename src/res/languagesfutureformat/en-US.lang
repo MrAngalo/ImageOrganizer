@@ -1,0 +1,98 @@
+######################################################################
+# This file contains all phrases used in the program.
+# It follows the same syntax as the .properties file
+#
+# To add comments, use # in front of every line
+# Do not remove any key-value pair
+
+# [IMPORTANT]: DO NOT MODIFY the keys before the equal sign (=)
+# and the placeholders "{pattern}" and "{total}"
+#
+# [Note]: DO NOT use Eclipse's built-in editor!!!
+# Modify this file using Notepad or Notepad++
+#
+# There is no need to include this comment block in translations
+######################################################################
+
+# Template created by MrAngalo (https://github.com/MrAngalo)
+
+##################################################
+# Fonts
+##################################################
+
+# This is the font used in the GUI; this font should contain all
+# characters in the file so that they display correctly.
+# An easy way to find a compatible font is to paste your text in
+# MS WORD and copying the fallback font.
+
+# The default family for swing elements is "Tahoma"
+font_family=Tahoma
+
+# The default style for swing elements is "Plain"
+# Possible values are {"Plain", "Bold", "Italic", "Bold Italic" }
+font_style=Plain
+
+# The default size for swing elements is "11"
+font_size=11
+
+
+
+##################################################
+# Main GUI 
+##################################################
+SourceLabel=Source Directory:
+SourceToolTip=The directory to fetch the images from (this is recursive)
+SourceButton=Open
+
+DestLabel=Destination Directory:
+DestToolTip=The directory to place all organized images
+DestButton=Open
+
+PatternTemplateLabel=Folder Pattern Template:
+PatternTemplateToolTip=The folder structure used to organize files
+
+PatternCustomLabel=Folder Pattern used:
+PatternCustomToolTip=Customize the folder structure here
+PatternCustomButton=Info
+
+OptionsLabel=Options:
+TransferModeToolTip=Select how source images will be treated
+TransferModeOption1=Copy files from source
+TransferModeOption2=Move files from source (dangerous)
+
+ResolverModeToolTip=Select how repeating images will be treated
+ResolverModeOption1=Add a trailing index to files ex. (1)
+ResolverModeOption2=Skip files with the same name
+
+ExtensionsLabel=Extensions:
+ExtensionsToolTip=Searches only the files that have the extension
+StartButton=Start
+CancelButton=Cancel
+
+
+
+##################################################
+# Warning Status Code 
+##################################################
+StatusCode1=Error: a field is empty!
+StatusCode2=Error: a path does not exist!
+StatusCode3=Error: a path cannot be relative!
+StatusCode4=Error: the paths cannot be the same!
+StatusCode5=Error: a path is not a directory!
+StatusCode6=Error: a path cannot contain another!
+StatusCode7=Error: an extension cannot contain spaces!
+StatusCode8=Error: There are no files to organize!
+StatusCode9=Error: The custom pattern is invalid!
+StatusCode10=Success: Processing images!
+StatusCode11=Success: Finished operation!
+StatusCode12=Success: Canceled operation!
+StatusCode13=Status: Pending cancellation!
+
+
+
+##################################################
+# Confirmation Popups
+##################################################
+ConfirmationPopup1=You are using a CUSTOM PATTERN! Are you sure you want to continue?\n\n{pattern}
+ConfirmationPopup2=There are {total} files in the source that will be affected! Are you sure you want to continue?
+ConfirmationPopup3=The destination folder is not empty! Are you sure you want to continue?

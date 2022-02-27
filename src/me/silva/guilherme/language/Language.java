@@ -12,15 +12,15 @@ public class Language {
 	//this maintain the same order as the lines in the language files
 	public enum PromptKey {
 		//Main GUI
-		M_SourceLabel, M_SourceToolTip, M_SourceButton,
-		M_DestLabel, M_DestToolTip, M_DestButton,
-		M_PatternTemplateLabel, M_PatternTemplateToolTip,
-		M_PatternCustomLabel, M_PatternCustomToolTip, M_PatternCustomButton,
-		M_OptionsLabel,
-		M_TransferModeToolTip, M_TransferModeOption1, M_TransferModeOption2,
-		M_ResolverModeToolTip, M_ResolverModeOption1, M_ResolverModeOption2,
-		M_ExtensionsLabel, M_ExtensionsToolTip,
-		M_StartButton, M_CancelButton,
+		SourceLabel, SourceToolTip, SourceButton,
+		DestLabel, DestToolTip, DestButton,
+		PatternTemplateLabel, PatternTemplateToolTip,
+		PatternCustomLabel, PatternCustomToolTip, PatternCustomButton,
+		OptionsLabel,
+		TransferModeToolTip, TransferModeOption1, TransferModeOption2,
+		ResolverModeToolTip, ResolverModeOption1, ResolverModeOption2,
+		ExtensionsLabel, ExtensionsToolTip,
+		StartButton, CancelButton,
 		//Status Code
 		StatusCode1, StatusCode2, StatusCode3,
 		StatusCode4, StatusCode5, StatusCode6,

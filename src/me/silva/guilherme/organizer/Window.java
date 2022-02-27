@@ -1,5 +1,33 @@
 package me.silva.guilherme.organizer;
 
+import static me.silva.guilherme.language.Language.PromptKey.ConfirmationPopup1;
+import static me.silva.guilherme.language.Language.PromptKey.ConfirmationPopup2;
+import static me.silva.guilherme.language.Language.PromptKey.ConfirmationPopup3;
+import static me.silva.guilherme.language.Language.PromptKey.CancelButton;
+import static me.silva.guilherme.language.Language.PromptKey.DestButton;
+import static me.silva.guilherme.language.Language.PromptKey.DestLabel;
+import static me.silva.guilherme.language.Language.PromptKey.DestToolTip;
+import static me.silva.guilherme.language.Language.PromptKey.ExtensionsLabel;
+import static me.silva.guilherme.language.Language.PromptKey.ExtensionsToolTip;
+import static me.silva.guilherme.language.Language.PromptKey.OptionsLabel;
+import static me.silva.guilherme.language.Language.PromptKey.PatternCustomButton;
+import static me.silva.guilherme.language.Language.PromptKey.PatternCustomLabel;
+import static me.silva.guilherme.language.Language.PromptKey.PatternCustomToolTip;
+import static me.silva.guilherme.language.Language.PromptKey.PatternTemplateLabel;
+import static me.silva.guilherme.language.Language.PromptKey.PatternTemplateToolTip;
+import static me.silva.guilherme.language.Language.PromptKey.ResolverModeOption1;
+import static me.silva.guilherme.language.Language.PromptKey.ResolverModeOption2;
+import static me.silva.guilherme.language.Language.PromptKey.ResolverModeToolTip;
+import static me.silva.guilherme.language.Language.PromptKey.SourceButton;
+import static me.silva.guilherme.language.Language.PromptKey.SourceLabel;
+import static me.silva.guilherme.language.Language.PromptKey.SourceToolTip;
+import static me.silva.guilherme.language.Language.PromptKey.StartButton;
+import static me.silva.guilherme.language.Language.PromptKey.TransferModeOption1;
+import static me.silva.guilherme.language.Language.PromptKey.TransferModeOption2;
+import static me.silva.guilherme.language.Language.PromptKey.TransferModeToolTip;
+import static me.silva.guilherme.language.Language.PromptKey.StatusCode1;
+import static me.silva.guilherme.language.Language.PromptKey.values;
+
 import java.awt.EventQueue;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
@@ -21,9 +49,6 @@ import javax.swing.border.EmptyBorder;
 
 import me.silva.guilherme.language.LanguageHandler;
 
-import static me.silva.guilherme.language.Language.PromptKey.*;
-import javax.swing.SwingConstants;
-
 public class Window extends JFrame {
 	
 	private static final long serialVersionUID = 1L;
@@ -41,7 +66,7 @@ public class Window extends JFrame {
 	
 	//https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html
 	private static final String[] PATTERN_TEMPLATES = {
-		"y/MM MMMM/dd MMM y H'h_'m'm_'s's'", /* 2020/08 August/15 Aug 2020 22h_43m_46s */
+		"y/MM MMMM/dd MMM y H'h_'m''s's'", /* 2020/08 August/15 Aug 2020 22h_4346s */
 		"y/MM MMMM/dd MMM y 'NAME'", /* 2020/08 August/15 Aug 2020 Clouds */
 		"y/MM MMMM/'NAME'", /* 2020/08 August/Clouds */
 		"y/'EXT'/'NAME'", /* 2020/png/Clouds*/
@@ -90,21 +115,21 @@ public class Window extends JFrame {
 		
 		//text is functionally unecessary, but shows up in window builder
 		JLabel sourceLabel = new JLabel("Source Directory:");
-		langHand.addDependent(lang -> sourceLabel.setText(lang.getPrompt(M_SourceLabel)));
+		langHand.addDependent(lang -> sourceLabel.setText(lang.getPrompt(SourceLabel)));
 		sourceLabel.setBounds(10, 84, 140, 20);
 		contentPane.add(sourceLabel);
 
 		sorceField = new JTextField();
 		//text is functionally unecessary, but shows up in window builder
 		sorceField.setToolTipText("the directory including all images to be organized (recursive)");
-		langHand.addDependent(lang -> sorceField.setToolTipText(lang.getPrompt(M_SourceToolTip)));
+		langHand.addDependent(lang -> sorceField.setToolTipText(lang.getPrompt(SourceToolTip)));
 		sorceField.setBounds(160, 84, 241, 22);
 		contentPane.add(sorceField);
 		sorceField.setColumns(10);
 
 		//text is functionally unecessary, but shows up in window builder
 		JButton sourceOpen = new JButton("Open");
-		langHand.addDependent(lang -> sourceOpen.setText(lang.getPrompt(M_SourceButton)));
+		langHand.addDependent(lang -> sourceOpen.setText(lang.getPrompt(SourceButton)));
 		sourceOpen.setBounds(411, 84, 65, 21);
 		contentPane.add(sourceOpen);
 		
@@ -116,21 +141,21 @@ public class Window extends JFrame {
 		
 		//text is functionally unecessary, but shows up in window builder
 		JLabel destLabel = new JLabel("Destination Directory:");
-		langHand.addDependent(lang -> destLabel.setText(lang.getPrompt(M_DestLabel)));
+		langHand.addDependent(lang -> destLabel.setText(lang.getPrompt(DestLabel)));
 		destLabel.setBounds(10, 114, 140, 20);
 		contentPane.add(destLabel);
 		
 		destField = new JTextField();
 		//text is functionally unecessary, but shows up in window builder
 		destField.setToolTipText("the directory to deposit sorted images");
-		langHand.addDependent(lang -> destField.setToolTipText(lang.getPrompt(M_DestToolTip)));
+		langHand.addDependent(lang -> destField.setToolTipText(lang.getPrompt(DestToolTip)));
 		destField.setColumns(10);
 		destField.setBounds(160, 114, 241, 22);
 		contentPane.add(destField);
 
 		//text is functionally unecessary, but shows up in window builder
 		JButton destOpen = new JButton("Open");
-		langHand.addDependent(lang -> destOpen.setText(lang.getPrompt(M_DestButton)));
+		langHand.addDependent(lang -> destOpen.setText(lang.getPrompt(DestButton)));
 		destOpen.setBounds(411, 114, 65, 21);
 		contentPane.add(destOpen);
 		
@@ -142,14 +167,14 @@ public class Window extends JFrame {
 
 		//text is functionally unecessary, but shows up in window builder
 		JLabel patternTemplateLabel = new JLabel("Folder Pattern Template:");
-		langHand.addDependent(lang -> patternTemplateLabel.setText(lang.getPrompt(M_PatternTemplateLabel)));
+		langHand.addDependent(lang -> patternTemplateLabel.setText(lang.getPrompt(PatternTemplateLabel)));
 		patternTemplateLabel.setBounds(10, 144, 140, 20);
 		contentPane.add(patternTemplateLabel);
 		
 		JComboBox patternTemplateSelect = new JComboBox();
 		//text is functionally unecessary, but shows up in window builder
 		patternTemplateSelect.setToolTipText("The folder structure used to organize files");
-		langHand.addDependent(lang -> patternTemplateSelect.setToolTipText(lang.getPrompt(M_PatternTemplateToolTip)));
+		langHand.addDependent(lang -> patternTemplateSelect.setToolTipText(lang.getPrompt(PatternTemplateToolTip)));
 		patternTemplateSelect.setModel(new DefaultComboBoxModel(populateTemplates()));
 		patternTemplateSelect.setSelectedIndex(0);
 		patternTemplateSelect.setBounds(160, 144, 316, 22);
@@ -164,14 +189,14 @@ public class Window extends JFrame {
 
 		//text is functionally unecessary, but shows up in window builder
 		JLabel patternLabel = new JLabel("Folder Pattern Used:");
-		langHand.addDependent(lang -> patternLabel.setText(lang.getPrompt(M_PatternCustomLabel)));
+		langHand.addDependent(lang -> patternLabel.setText(lang.getPrompt(PatternCustomLabel)));
 		patternLabel.setBounds(10, 174, 140, 20);
 		contentPane.add(patternLabel);
 		
 		patternField = new JTextField();
 		//text is functionally unecessary, but shows up in window builder
 		patternField.setToolTipText("the format used inside the destination directory");
-		langHand.addDependent(lang -> patternField.setToolTipText(lang.getPrompt(M_PatternCustomToolTip)));
+		langHand.addDependent(lang -> patternField.setToolTipText(lang.getPrompt(PatternCustomToolTip)));
 		patternField.setColumns(10);
 		patternField.setBounds(160, 175, 241, 22);
 		contentPane.add(patternField);
@@ -179,7 +204,7 @@ public class Window extends JFrame {
 
 		//text is functionally unecessary, but shows up in window builder
 		JButton patternHelp = new JButton("?");
-		langHand.addDependent(lang -> patternHelp.setText(lang.getPrompt(M_PatternCustomButton)));
+		langHand.addDependent(lang -> patternHelp.setText(lang.getPrompt(PatternCustomButton)));
 		patternHelp.setBounds(411, 176, 65, 21);
 		contentPane.add(patternHelp);
 		
@@ -189,7 +214,7 @@ public class Window extends JFrame {
 		
 		//text is functionally unecessary, but shows up in window builder
 		JLabel optionsLabel = new JLabel("Options:");
-		langHand.addDependent(lang -> optionsLabel.setText(lang.getPrompt(M_OptionsLabel)));
+		langHand.addDependent(lang -> optionsLabel.setText(lang.getPrompt(OptionsLabel)));
 		optionsLabel.setBounds(10, 204, 100, 20);
 		contentPane.add(optionsLabel);
 		
@@ -199,9 +224,9 @@ public class Window extends JFrame {
 		transferModeSelect.setModel(new DefaultComboBoxModel(new String[] {
 				"Copy files from source", "Move files from source (caution)"}));
 		langHand.addDependent(lang -> {
-			transferModeSelect.setToolTipText(lang.getPrompt(M_TransferModeToolTip));
+			transferModeSelect.setToolTipText(lang.getPrompt(TransferModeToolTip));
 			transferModeSelect.setModel(new DefaultComboBoxModel(new String[] {
-					lang.getPrompt(M_TransferModeOption1), lang.getPrompt(M_TransferModeOption2)}));
+					lang.getPrompt(TransferModeOption1), lang.getPrompt(TransferModeOption2)}));
 		});
 		transferModeSelect.setSelectedIndex(0);
 		transferModeSelect.setBounds(160, 207, 316, 22);
@@ -213,9 +238,9 @@ public class Window extends JFrame {
 		resolverModeSelect.setModel(new DefaultComboBoxModel(new String[] {
 				"Add trailing index to files of same name ex. (1)", "Skip files with the same name"}));
 		langHand.addDependent(lang -> {
-			resolverModeSelect.setToolTipText(lang.getPrompt(M_ResolverModeToolTip));
+			resolverModeSelect.setToolTipText(lang.getPrompt(ResolverModeToolTip));
 			resolverModeSelect.setModel(new DefaultComboBoxModel(new String[] {
-					lang.getPrompt(M_ResolverModeOption1), lang.getPrompt(M_ResolverModeOption2)}));
+					lang.getPrompt(ResolverModeOption1), lang.getPrompt(ResolverModeOption2)}));
 		});
 		resolverModeSelect.setSelectedIndex(0);
 		resolverModeSelect.setBounds(160, 239, 316, 22);
@@ -223,14 +248,14 @@ public class Window extends JFrame {
 
 		//text is functionally unecessary, but shows up in window builder
 		JLabel extensionLabel = new JLabel("Extensions:");
-		langHand.addDependent(lang -> extensionLabel.setText(lang.getPrompt(M_ExtensionsLabel)));
+		langHand.addDependent(lang -> extensionLabel.setText(lang.getPrompt(ExtensionsLabel)));
 		extensionLabel.setBounds(10, 269, 140, 20);
 		contentPane.add(extensionLabel);
 		
 		extensionField = new JTextField();
 		//text is functionally unecessary, but shows up in window builder
 		extensionField.setToolTipText("extensions that will be analyzed inside the source directory");
-		langHand.addDependent(lang -> extensionField.setToolTipText(lang.getPrompt(M_ExtensionsToolTip)));
+		langHand.addDependent(lang -> extensionField.setToolTipText(lang.getPrompt(ExtensionsToolTip)));
 		extensionField.setText("png,jpg,jpeg,gif,mp4,mov,mpg,wmv,3gp,avi,ogg,mp3,wma");
 		extensionField.setColumns(10);
 		extensionField.setBounds(160, 270, 241, 22);
@@ -249,7 +274,7 @@ public class Window extends JFrame {
 
 		//text is functionally unecessary, but shows up in window builder
 		JButton cancelButton = new JButton("Cancel");
-		langHand.addDependent(lang -> cancelButton.setText(lang.getPrompt(M_CancelButton)));
+		langHand.addDependent(lang -> cancelButton.setText(lang.getPrompt(CancelButton)));
 		cancelButton.setEnabled(false);
 		cancelButton.setBounds(396, 299, 80, 21);
 		contentPane.add(cancelButton);
@@ -261,7 +286,7 @@ public class Window extends JFrame {
 
 		//text is functionally unecessary, but shows up in window builder
 		JButton startButton = new JButton("Start");
-		langHand.addDependent(lang -> startButton.setText(lang.getPrompt(M_StartButton)));
+		langHand.addDependent(lang -> startButton.setText(lang.getPrompt(StartButton)));
 		startButton.setBounds(306, 299, 80, 21);
 		contentPane.add(startButton);
 		
