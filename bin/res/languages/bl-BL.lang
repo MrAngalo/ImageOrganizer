@@ -40,27 +40,27 @@ FontSize=11
 ##################################################
 # Main GUI 
 ##################################################
-SourceLabel=ফাইল এর উৎস :
+SourceLabel=ফাইল এর উৎস:
 SourceToolTip=এখান থেকে সব ছবি জড়ো করা হবে । 
 SourceButton=নির্বাচন করুন 
 
-DestLabel=গন্তব্য নির্বাচন :
+DestLabel=গন্তব্য নির্বাচন:
 DestToolTip=এখানে  বিন্যাসকৃত  ফাইলগুলো সংরক্ষিত হবে ।
 DestButton=নির্বাচন করুন 
 
-PatternTemplateLabel=Folder Pattern Template:
-PatternTemplateToolTip=The folder structure used to organize files
+PatternTemplateLabel=ফোল্ডার প্যাটার্ন টেমপ্লেট:
+PatternTemplateToolTip=ফোল্ডার কাঠামো ফাইল সংগঠিত করতে ব্যবহৃত
 
 PatternCustomLabel=ক্রম নির্বাচন:
 PatternCustomToolTip=যে ক্রম এ বিন্যাসকৃত হবে তা নির্বাচন। 
 PatternCustomButton=তথ্য 
 
 OptionsLabel=বিকল্প: 
-TransferModeToolTip=যে পদ্ধতি তে উৎসের ছবি বিন্যাসকৃত হবে ।
+TransferModeToolTip=যে পদ্ধতি তে উৎসের ছবি বিন্যাসকৃত হবে:
 TransferModeOption1=উৎস থেকে ছবি অনুকরণ করুন।
 TransferModeOption2=উৎস থেকে ছবি স্থানান্তরণ করুন। (সতর্কতা অবলম্বন করুন।)
 
-ResolverModeToolTip=একইরকম  ছবির সাথে ব্যবহার : 
+ResolverModeToolTip=একইরকম  ছবির সাথে ব্যবহার: 
 ResolverModeOption1=ফাইলগুলোর পিছনে সংখ্যা যোগ করুন, যেমন (১)
 ResolverModeOption2=একইরকম ফাইলগুলো উপেক্ষা করুন।
 
@@ -94,6 +94,6 @@ StatusCode13=অবস্থা: রদকরণের অনুরোধ সম
 ##################################################
 # Confirmation Popups
 ##################################################
-ConfirmationPopup1=You are using a CUSTOM PATTERN! Are you sure you want to continue?\n\n{pattern}
+ConfirmationPopup1=আপনি একটি কাস্টম প্যাটার্ন ব্যবহার করছেন! আপনি কি চালিয়ে যেতে চান?\n\n{pattern}
 ConfirmationPopup2=উৎসের {total} ফাইল প্রভাবিত  হচ্ছে  ।  অগ্রসিত হক? 
 ConfirmationPopup3=গন্তব্যে ফাইল পাওয়া গিয়েছে  । অগ্রসিত হক? 
